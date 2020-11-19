@@ -3,7 +3,7 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="hero-container" data-aos="fade-in">
-        <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-md-8 col-lg-6 text-center">
             <img src="/assets/img/dashboard.png"   alt="Responsive image" />
           </div>
@@ -17,8 +17,8 @@
             </p>
             <button class="btn btn-success">Daftar</button>
           </div>
-        </div> -->
-        <div
+        </div>
+        <!-- <div
           id="hero-mobile-view"
           class="row mt-5 p-2"
           data-aos="fade-up"
@@ -37,7 +37,7 @@
           <div class="col-12 text-center">
             <img src="/assets/img/dashboard.png" alt="Responsive image" />
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- End Hero Section -->
@@ -545,17 +545,9 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+    myCaptcha
   },
-  components: {
-    "my-captcha": myCaptcha,
-  },
-  computed: {
-    screenDetect() {
-      console.log(window.innerWidth);
-    },
-  },
-  methods: {},
-  created() {},
+
 };
 </script>
 
