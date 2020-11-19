@@ -3,9 +3,22 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero">
       <div class="hero-container" data-aos="fade-in">
-        <br />
-        <div
-          v-if="mobile"
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-md-8 col-lg-6 text-center">
+            <img src="/assets/img/dashboard.png"   alt="Responsive image" />
+          </div>
+          <div class="col-md-4 col-lg-6 info">
+            <div>
+              <h1>Investor<br />Management Spesialist</h1>
+            </div>
+            <p class="text-lead">
+              Kami solusi untuk Anda yang ingin <br />
+              menitipkan unit kendaraan untuk dijual
+            </p>
+            <button class="btn btn-success">Daftar</button>
+          </div>
+        </div>
+        <!-- <div
           id="hero-mobile-view"
           class="row mt-5 p-2"
           data-aos="fade-up"
@@ -24,22 +37,7 @@
           <div class="col-12 text-center">
             <img src="/assets/img/dashboard.png" alt="Responsive image" />
           </div>
-        </div>
-        <div v-else class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-md-8 col-lg-6 text-center">
-            <img src="/assets/img/dashboard.png" alt="Responsive image" />
-          </div>
-          <div class="col-md-4 col-lg-6 info">
-            <div>
-              <h1>Investor<br />Management Spesialist</h1>
-            </div>
-            <p class="text-lead">
-              Kami solusi untuk Anda yang ingin <br />
-              menitipkan unit kendaraan untuk dijual
-            </p>
-            <button class="btn btn-success">Daftar</button>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- End Hero Section -->
@@ -547,41 +545,9 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
-    myCaptcha,
-  },
-  data() {
-    return {
-      windowWidth: window.innerWidth,
-      txt: "",
-      mobile: false,
-    };
+    myCaptcha
   },
 
-  watch: {
-    windowWidth(val) {
-      if (val <= 500) {
-        this.mobile = true;
-      } else {
-        this.mobile = false;
-      }
-    },
-  },
-
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener("resize", this.onResize);
-    });
-  },
-
-  beforeDestroy() {
-    window.removeEventListener("resize", this.onResize);
-  },
-
-  methods: {
-    onResize() {
-      this.windowWidth = window.innerWidth;
-    },
-  },
 };
 </script>
 
